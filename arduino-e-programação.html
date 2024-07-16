@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 11 Arduino e Programação | Tópicos Especiais em Eletrônica</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 11 Arduino e Programação | Tópicos Especiais em Eletrônica" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 11 Arduino e Programação | Tópicos Especiais em Eletrônica" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Lucas Marcley Carvalho dos Santos" />
+
+
+<meta name="date" content="2024-07-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="plotter.html"/>
+<link rel="next" href="projeto-final.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Descrição da Matéria</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#local-e-horário"><i class="fa fa-check"></i><b>1.1</b> Local e Horário</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#sobre-a-matéria"><i class="fa fa-check"></i><b>1.2</b> Sobre a Matéria</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#conteúdo-do-curso"><i class="fa fa-check"></i><b>1.3</b> Conteúdo do Curso</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#objetivos-do-curso"><i class="fa fa-check"></i><b>1.4</b> Objetivos do Curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#teoria"><i class="fa fa-check"></i><b>2.2</b> Teoria</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-da-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações da Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.2</b> Software</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.3.3</b> Segurança</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><i class="fa fa-check"></i><b>3</b> Desenho 2D e sua Aplicação na Usinagem CNC</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html#teoria-1"><i class="fa fa-check"></i><b>3.1</b> Teoria</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html"><i class="fa fa-check"></i><b>4</b> Corte a Lazer</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#teoria-2"><i class="fa fa-check"></i><b>4.1</b> Teoria</a></li>
+<li class="chapter" data-level="4.2" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#tipos-de-materiais"><i class="fa fa-check"></i><b>4.2</b> Tipos de Materiais</a></li>
+<li class="chapter" data-level="4.3" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#prática"><i class="fa fa-check"></i><b>4.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="desenho-3d.html"><a href="desenho-3d.html"><i class="fa fa-check"></i><b>5</b> Desenho 3D</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="desenho-3d.html"><a href="desenho-3d.html#teoria-3"><i class="fa fa-check"></i><b>5.1</b> Teoria</a></li>
+<li class="chapter" data-level="5.2" data-path="desenho-3d.html"><a href="desenho-3d.html#prática-1"><i class="fa fa-check"></i><b>5.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>6</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="impressão-3d.html"><a href="impressão-3d.html#teoria-4"><i class="fa fa-check"></i><b>6.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="impressão-3d.html"><a href="impressão-3d.html#tipos-de-impressão-3d"><i class="fa fa-check"></i><b>6.1.1</b> Tipos de Impressão 3D</a></li>
+<li class="chapter" data-level="6.1.2" data-path="impressão-3d.html"><a href="impressão-3d.html#vantagens-da-impressão-3d"><i class="fa fa-check"></i><b>6.1.2</b> Vantagens da Impressão 3D</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="impressão-3d.html"><a href="impressão-3d.html#prática-2"><i class="fa fa-check"></i><b>6.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html"><i class="fa fa-check"></i><b>7</b> Fresadora CNC</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html#teoria-5"><i class="fa fa-check"></i><b>7.1</b> Teoria</a></li>
+<li class="chapter" data-level="7.2" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html#ptática"><i class="fa fa-check"></i><b>7.2</b> Ptática</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html"><i class="fa fa-check"></i><b>8</b> Soldagem Eletrônica</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#teoria-6"><i class="fa fa-check"></i><b>8.1</b> Teoria</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#processo-de-soldagem-eletrônica"><i class="fa fa-check"></i><b>8.2</b> Processo de Soldagem Eletrônica</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#prática-3"><i class="fa fa-check"></i><b>8.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="circuito-impresso.html"><a href="circuito-impresso.html"><i class="fa fa-check"></i><b>9</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#teoria-7"><i class="fa fa-check"></i><b>9.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#corrosão"><i class="fa fa-check"></i><b>9.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="9.1.2" data-path="circuito-impresso.html"><a href="circuito-impresso.html#usiangem"><i class="fa fa-check"></i><b>9.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="9.1.3" data-path="circuito-impresso.html"><a href="circuito-impresso.html#produção-de-um-circuito-impresso"><i class="fa fa-check"></i><b>9.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>10</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="plotter.html"><a href="plotter.html#teoria-8"><i class="fa fa-check"></i><b>10.1</b> Teoria</a></li>
+<li class="chapter" data-level="10.2" data-path="plotter.html"><a href="plotter.html#prática-4"><i class="fa fa-check"></i><b>10.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html"><i class="fa fa-check"></i><b>11</b> Arduino e Programação</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#teoria-9"><i class="fa fa-check"></i><b>11.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#componentes-básicos-do-arduino"><i class="fa fa-check"></i><b>11.1.1</b> Componentes Básicos do Arduino</a></li>
+<li class="chapter" data-level="11.1.2" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#ambiente-de-desenvolvimento-arduino-ide"><i class="fa fa-check"></i><b>11.1.2</b> Ambiente de Desenvolvimento Arduino (IDE)</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#linguagem-de-programação-arduino"><i class="fa fa-check"></i><b>11.2</b> Linguagem de Programação Arduino</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#estrutura-básica-de-um-sketch"><i class="fa fa-check"></i><b>11.2.1</b> Estrutura Básica de um Sketch</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#tinkercad"><i class="fa fa-check"></i><b>11.3</b> Tinkercad</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="projeto-final.html"><a href="projeto-final.html"><i class="fa fa-check"></i><b>12</b> Projeto Final</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="projeto-final.html"><a href="projeto-final.html#construção-do-projeto"><i class="fa fa-check"></i><b>12.1</b> Construção do Projeto</a></li>
+<li class="chapter" data-level="12.2" data-path="projeto-final.html"><a href="projeto-final.html#dificuldades-do-projeto"><i class="fa fa-check"></i><b>12.2</b> Dificuldades do projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tópicos Especiais em Eletrônica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="arduino-e-programação" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Capítulo 11</span> Arduino e Programação<a href="arduino-e-programação.html#arduino-e-programação" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="teoria-9" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Teoria<a href="arduino-e-programação.html#teoria-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+O Arduino foi criado em 2005 por um grupo de estudantes e professores do Instituto de Design de Interação de Ivrea, na Itália. Seu objetivo era fornecer uma plataforma de baixo custo e fácil de usar para estudantes e entusiastas de eletrônica. A filosofia do Arduino é baseada em três princípios: acessibilidade, facilidade de uso e comunidade colaborativa.
+</p>
+<p style='text-align: justify;'>
+O Arduino é uma plataforma de prototipagem eletrônica de código aberto baseada em hardware e software fáceis de usar. É projetada para tornar a eletrônica mais acessível a todos, desde iniciantes até profissionais. A plataforma Arduino permite a criação de projetos eletrônicos interativos, onde sensores e atuadores são controlados por um microcontrolador programável.
+<p style='text-align: justify;'>
+<div id="componentes-básicos-do-arduino" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Componentes Básicos do Arduino<a href="arduino-e-programação.html#componentes-básicos-do-arduino" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p style="text-align: justify;">
+<strong>Placas Arduino</strong>: As placas Arduino vêm em várias formas e tamanhos, cada uma adequada para diferentes tipos de projetos: Arduino Uno, Mega e nano são os mais comuns.
+</p>
+<p style="text-align: justify;">
+<strong>O microcontrolador</strong>: È o “cérebro” da placa Arduino. Ele executa o código carregado na placa e controla as interações entre os diferentes componentes conectados. Os microcontroladores mais comuns nas placas Arduino são os da série ATmega da Atmel.
+</p>
+<p style="text-align: justify;">
+<strong>Pinos de Entrada/Saída</strong>: As placas Arduino possuem pinos de entrada/saída (I/O) que podem ser configurados como digitais ou analógicos. Esses pinos são usados para conectar sensores, atuadores e outros dispositivos. Os <strong>Pinos Digitais</strong> são Usados para ler ou enviar sinais digitais (0 ou 5V). E os <strong>Pinos Analógicos</strong> são Usados para ler sinais analógicos (0-1023) ou enviar sinais PWM.
+</p>
+<p style="text-align: justify;">
+<strong>Fonte de Alimentação</strong>: As placas Arduino podem ser alimentadas via USB ou através de uma fonte externa (bateria ou adaptador AC-DC). A maioria das placas possui um regulador de tensão que garante que a alimentação fornecida ao microcontrolador seja estável.
+</p>
+</div>
+<div id="ambiente-de-desenvolvimento-arduino-ide" class="section level3 hasAnchor" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> Ambiente de Desenvolvimento Arduino (IDE)<a href="arduino-e-programação.html#ambiente-de-desenvolvimento-arduino-ide" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p style="text-align: justify;">
+O Arduino IDE (Integrated Development Environment) é o software usado para escrever, compilar e carregar programas (chamados sketches) nas placas Arduino. Ele é projetado para ser fácil de usar, mesmo para aqueles sem experiência prévia em programação.
+</p>
+<p><img src="ard1.jpg" style="display:block; margin:0 auto;;width:50.0%" /></p>
+<center>
+Fig 26: Arduino IDE.
+</center>
+</div>
+</div>
+<div id="linguagem-de-programação-arduino" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Linguagem de Programação Arduino<a href="arduino-e-programação.html#linguagem-de-programação-arduino" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+A programação Arduino é baseada em uma linguagem derivada do C/C++, simplificada para facilitar o uso. Um sketch Arduino possui duas funções principais:
+</p>
+<ol style="list-style-type: decimal">
+<li><strong>setup()</strong>: Executada uma vez no início, usada para configurar pinos de I/O e outras configurações iniciais.</li>
+<li><strong>loop()</strong>: Executada repetidamente, contém o código principal do programa.</li>
+</ol>
+<div id="estrutura-básica-de-um-sketch" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Estrutura Básica de um Sketch<a href="arduino-e-programação.html#estrutura-básica-de-um-sketch" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span id="cb1-1"><a href="arduino-e-programação.html#cb1-1" tabindex="-1"></a><span class="dt">void</span> setup<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-2"><a href="arduino-e-programação.html#cb1-2" tabindex="-1"></a>  <span class="co">// Configurações iniciais</span></span>
+<span id="cb1-3"><a href="arduino-e-programação.html#cb1-3" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-4"><a href="arduino-e-programação.html#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="arduino-e-programação.html#cb1-5" tabindex="-1"></a><span class="dt">void</span> loop<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb1-6"><a href="arduino-e-programação.html#cb1-6" tabindex="-1"></a>  <span class="co">// Código principal que será executado repetidamente</span></span>
+<span id="cb1-7"><a href="arduino-e-programação.html#cb1-7" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p style="text-align: justify;">
+O Arduino possui uma vasta coleção de bibliotecas que facilitam a interface com diversos sensores, atuadores e outros dispositivos. As bibliotecas fornecem funções e métodos pré-definidos que simplificam a programação de tarefas complexas.
+</p>
+<p style="text-align: justify;">
+A comunicação entre o Arduino e outros dispositivos é fundamental para muitos projetos. O Arduino suporta diversos protocolos de comunicação, como serial, I2C e SPI.
+</p>
+<p style="text-align: justify;">
+A comunicação serial é uma das formas mais comuns de comunicação com o Arduino. Utiliza os pinos RX (receber) e TX (transmitir) e permite a troca de dados entre o Arduino e outros dispositivos, como um computador.
+</p>
+<ul>
+<li><strong>Serial.begin(baudrate)</strong>: Inicializa a comunicação serial com uma taxa de transmissão específica.</li>
+<li><strong>Serial.print() / Serial.println()</strong>: Envia dados para o monitor serial.</li>
+<li><strong>Serial.read() / Serial.available()</strong>: Lê dados recebidos.</li>
+</ul>
+<p>A programação direcionada ao Arduino é uma habilidade poderosa que permite transformar ideias em realidade. A plataforma Arduino, com sua combinação de hardware acessível e software fácil de usar, é ideal para iniciantes e profissionais. Desde projetos educacionais simples até aplicações complexas em automação, robótica e IoT, o Arduino oferece uma base sólida para a inovação eletrônica. Com uma compreensão profunda do hardware e software do Arduino, você estará bem equipado para explorar as infinitas possibilidades dessa incrível plataforma.</p>
+</div>
+</div>
+<div id="tinkercad" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Tinkercad<a href="arduino-e-programação.html#tinkercad" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+Tinkercad é uma ferramenta online gratuita de design 3D, circuitos eletrônicos e modelagem baseada em blocos, desenvolvida pela Autodesk. É especialmente popular entre iniciantes devido à sua interface intuitiva e facilidade de uso, permitindo que usuários transformem suas ideias em projetos físicos rapidamente.
+</p>
+<p style="text-align: justify;">
+O Tinkercad permite a criação de modelos 3D a partir de formas geométricas básicas, que podem ser combinadas e manipuladas para formar objetos mais complexos. Os usuários podem exportar seus modelos em formatos como STL, OBJ e SVG, adequados para impressão 3D e outras aplicações de fabricação digital. Além disso, o Tinkercad suporta a exportação de designs compatíveis com o jogo Minecraft, permitindo que os usuários criem e importem suas construções para o ambiente do jogo.
+</p>
+<p style="text-align: justify;">
+A plataforma também inclui um módulo para a criação e simulação de circuitos eletrônicos, chamado Tinkercad Circuits. Essa ferramenta permite que os usuários projetem circuitos, adicionem componentes eletrônicos (como resistores, LEDs, sensores e microcontroladores) e simulem o comportamento do circuito diretamente na plataforma. É uma excelente ferramenta educativa para aprender conceitos de eletrônica e programação de microcontroladores como o Arduino.
+</p>
+<p style="text-align: justify;">
+Para usuários interessados em programação, o Tinkercad oferece uma interface de programação baseada em blocos, semelhante ao Scratch, que facilita a criação de código para controlar circuitos e dispositivos. Isso é particularmente útil para iniciantes que estão aprendendo lógica de programação e como integrar software com hardware.
+</p>
+<p><img src="ard2.png" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 27: Interface da plataforma Tinkercad.
+</center>
+<p>Pode-se observar na figura abaixo um circuito de um semáforo desenvolvido na plataforma tinkercad e feito a programação ao lado na barra código.</p>
+<p><img src="ard3.png" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 28: Circuito de semáforo desenvolvido no tinkercad.
+</center>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="plotter.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="projeto-final.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/lucasmarcley/l_marcley/edit/main/09-programacao.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

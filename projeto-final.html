@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 12 Projeto Final | Tópicos Especiais em Eletrônica</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 12 Projeto Final | Tópicos Especiais em Eletrônica" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 12 Projeto Final | Tópicos Especiais em Eletrônica" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Lucas Marcley Carvalho dos Santos" />
+
+
+<meta name="date" content="2024-07-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="arduino-e-programação.html"/>
+<link rel="next" href="referências.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Descrição da Matéria</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#local-e-horário"><i class="fa fa-check"></i><b>1.1</b> Local e Horário</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#sobre-a-matéria"><i class="fa fa-check"></i><b>1.2</b> Sobre a Matéria</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#conteúdo-do-curso"><i class="fa fa-check"></i><b>1.3</b> Conteúdo do Curso</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#objetivos-do-curso"><i class="fa fa-check"></i><b>1.4</b> Objetivos do Curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#teoria"><i class="fa fa-check"></i><b>2.2</b> Teoria</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-da-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações da Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.2</b> Software</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.3.3</b> Segurança</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><i class="fa fa-check"></i><b>3</b> Desenho 2D e sua Aplicação na Usinagem CNC</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html#teoria-1"><i class="fa fa-check"></i><b>3.1</b> Teoria</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html"><i class="fa fa-check"></i><b>4</b> Corte a Lazer</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#teoria-2"><i class="fa fa-check"></i><b>4.1</b> Teoria</a></li>
+<li class="chapter" data-level="4.2" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#tipos-de-materiais"><i class="fa fa-check"></i><b>4.2</b> Tipos de Materiais</a></li>
+<li class="chapter" data-level="4.3" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#prática"><i class="fa fa-check"></i><b>4.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="desenho-3d.html"><a href="desenho-3d.html"><i class="fa fa-check"></i><b>5</b> Desenho 3D</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="desenho-3d.html"><a href="desenho-3d.html#teoria-3"><i class="fa fa-check"></i><b>5.1</b> Teoria</a></li>
+<li class="chapter" data-level="5.2" data-path="desenho-3d.html"><a href="desenho-3d.html#prática-1"><i class="fa fa-check"></i><b>5.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>6</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="impressão-3d.html"><a href="impressão-3d.html#teoria-4"><i class="fa fa-check"></i><b>6.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="impressão-3d.html"><a href="impressão-3d.html#tipos-de-impressão-3d"><i class="fa fa-check"></i><b>6.1.1</b> Tipos de Impressão 3D</a></li>
+<li class="chapter" data-level="6.1.2" data-path="impressão-3d.html"><a href="impressão-3d.html#vantagens-da-impressão-3d"><i class="fa fa-check"></i><b>6.1.2</b> Vantagens da Impressão 3D</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="impressão-3d.html"><a href="impressão-3d.html#prática-2"><i class="fa fa-check"></i><b>6.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html"><i class="fa fa-check"></i><b>7</b> Fresadora CNC</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html#teoria-5"><i class="fa fa-check"></i><b>7.1</b> Teoria</a></li>
+<li class="chapter" data-level="7.2" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html#ptática"><i class="fa fa-check"></i><b>7.2</b> Ptática</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html"><i class="fa fa-check"></i><b>8</b> Soldagem Eletrônica</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#teoria-6"><i class="fa fa-check"></i><b>8.1</b> Teoria</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#processo-de-soldagem-eletrônica"><i class="fa fa-check"></i><b>8.2</b> Processo de Soldagem Eletrônica</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#prática-3"><i class="fa fa-check"></i><b>8.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="circuito-impresso.html"><a href="circuito-impresso.html"><i class="fa fa-check"></i><b>9</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#teoria-7"><i class="fa fa-check"></i><b>9.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#corrosão"><i class="fa fa-check"></i><b>9.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="9.1.2" data-path="circuito-impresso.html"><a href="circuito-impresso.html#usiangem"><i class="fa fa-check"></i><b>9.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="9.1.3" data-path="circuito-impresso.html"><a href="circuito-impresso.html#produção-de-um-circuito-impresso"><i class="fa fa-check"></i><b>9.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>10</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="plotter.html"><a href="plotter.html#teoria-8"><i class="fa fa-check"></i><b>10.1</b> Teoria</a></li>
+<li class="chapter" data-level="10.2" data-path="plotter.html"><a href="plotter.html#prática-4"><i class="fa fa-check"></i><b>10.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html"><i class="fa fa-check"></i><b>11</b> Arduino e Programação</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#teoria-9"><i class="fa fa-check"></i><b>11.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#componentes-básicos-do-arduino"><i class="fa fa-check"></i><b>11.1.1</b> Componentes Básicos do Arduino</a></li>
+<li class="chapter" data-level="11.1.2" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#ambiente-de-desenvolvimento-arduino-ide"><i class="fa fa-check"></i><b>11.1.2</b> Ambiente de Desenvolvimento Arduino (IDE)</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#linguagem-de-programação-arduino"><i class="fa fa-check"></i><b>11.2</b> Linguagem de Programação Arduino</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#estrutura-básica-de-um-sketch"><i class="fa fa-check"></i><b>11.2.1</b> Estrutura Básica de um Sketch</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#tinkercad"><i class="fa fa-check"></i><b>11.3</b> Tinkercad</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="projeto-final.html"><a href="projeto-final.html"><i class="fa fa-check"></i><b>12</b> Projeto Final</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="projeto-final.html"><a href="projeto-final.html#construção-do-projeto"><i class="fa fa-check"></i><b>12.1</b> Construção do Projeto</a></li>
+<li class="chapter" data-level="12.2" data-path="projeto-final.html"><a href="projeto-final.html#dificuldades-do-projeto"><i class="fa fa-check"></i><b>12.2</b> Dificuldades do projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tópicos Especiais em Eletrônica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="projeto-final" class="section level1 hasAnchor" number="12">
+<h1><span class="header-section-number">Capítulo 12</span> Projeto Final<a href="projeto-final.html#projeto-final" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p style="text-align: justify;">
+Neste projeto será proposto a construção de uma mini CNC plotter 2D utilizando arduino e Shield L293D. Os materias utilizados para o desenvolvimento do projeto serão os seguintes:
+</p>
+<p><img src="final2.png" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 29: Principais materias utilizados.
+</center>
+<ul>
+<li>Arduino Arduino UNO;</li>
+<li>Sensor Shield L293D;</li>
+<li>Mini Servo Motor;</li>
+<li>2 X Leitor de CD/DVD.</li>
+</ul>
+<p style='text-align: justify;'>
+Esses são os principais componentes a serem utilizados para a construção do projeto. O esquema elétrico pode ser observado na figura 30 abaixo.
+<p style='text-align: justify;'>
+<p><img src="final1.jpeg" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 30: Circuito esquemático.
+</center>
+<div id="construção-do-projeto" class="section level2 hasAnchor" number="12.1">
+<h2><span class="header-section-number">12.1</span> Construção do Projeto<a href="projeto-final.html#construção-do-projeto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+Para iniciar a construção do projeto, foi selecionado uma madeira que seria a base para fixar o drive. Ja foi logo conectado no arduino junto com o Sensor Shield L293D e uma fonte de 9v para que fosse testado se o drive estava funcionando. Pode-se verificar na figura 31 como ficou a montagem e na figura 32 o código utilizado para teste.
+</p>
+<p><img src="proj1.jpeg" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 31: Montagem física da eixo X.
+</center>
+<p><img src="proj2.png" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 32: Código teste de verificação.
+</center>
+<p style="text-align: justify;">
+Em seguida, foi montado a estrutura para o eixo Y, foram feitos 3 cortes de madeira e pego alguns parafuros que a montagme, além do drive. O que pode-se verificar nas figuras 33 e 34 abaixo.
+</p>
+<p><img src="proj3.jpeg" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 33: Estrutura eixo Y.
+</center>
+<p><img src="proj4.jpeg" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 34: Montagem do eixo Y.
+</center>
+<p style="text-align: justify;">
+Foi usado o mesmo código da figura 26 para testar se o drive estava funcionando perfeitamente. Após isso, os eixos X e Y foram agrupados na mesma base, colocando a mesa, que foi feita de acrílico e um pedaço de madeira para da suporte, para que a estrutura principal da mini CNC plotter 2D fosse finalizada.
+</p>
+<p><img src="proj5.jpeg" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 35: Agrupamento dos eixos X e Y.
+</center>
+<p style="text-align: justify;">
+Após o agrupamento dos eixos, foi colocado um servo motor. Esse servo motor será utilizado como eixo Z, tendo a função principal de subir e abaixar a caneta que ficará presa no eixo Y. A caneta foi colocada dentro de um cano preto e foi feito um furo nele para que pudesse ser colocado o suporte que auxiliará no movimento de subida e descida. O resultado pode ser observado na Figura 36.
+</p>
+<p><img src="proj7.jpeg" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 36: Resultado final da estrutura
+</center>
+</div>
+<div id="dificuldades-do-projeto" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Dificuldades do projeto<a href="projeto-final.html#dificuldades-do-projeto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+Durante o desenvolvimento do projeto, surgiram algumas questões que impediram o funcionamento correto do projeto. A principal delas foi o <strong>Drive Sensor Shield L293D</strong>, que não estava com a porta 2 funcionando corretamente. Foram realizados alguns testes, incluindo a troca do CI do drive, a inversão da ordem dos motores e o uso de uma fonte externa, pois não se sabia quanta corrente os motores estavam drenando.
+</p>
+<p style="text-align: justify;">
+Após todos esses testes, verificou-se que o problema era realmente o drive, cuja porta 2 estava com defeito. Como consequência, o eixo X não estava funcionando corretamente, o que nos deixou apenas com os eixos Y e Z para desenho.
+</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="arduino-e-programação.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referências.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/lucasmarcley/l_marcley/edit/main/10-projetofinal.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

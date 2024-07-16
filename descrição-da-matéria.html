@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Tópicos Especiais em Eletrônica</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Tópicos Especiais em Eletrônica" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tópicos Especiais em Eletrônica" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Lucas Marcley Carvalho dos Santos" />
+
+
+<meta name="date" content="2024-07-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="projeto-final.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="descrição-da-matéria.html"><a href="descrição-da-matéria.html"><i class="fa fa-check"></i><b>1</b> Descrição da Matéria</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="descrição-da-matéria.html"><a href="descrição-da-matéria.html#local-e-horário"><i class="fa fa-check"></i><b>1.1</b> Local e Horário</a></li>
+<li class="chapter" data-level="1.2" data-path="descrição-da-matéria.html"><a href="descrição-da-matéria.html#sobre-a-matéria"><i class="fa fa-check"></i><b>1.2</b> Sobre a Matéria</a></li>
+<li class="chapter" data-level="1.3" data-path="descrição-da-matéria.html"><a href="descrição-da-matéria.html#conteúdo-do-curso"><i class="fa fa-check"></i><b>1.3</b> Conteúdo do Curso</a></li>
+<li class="chapter" data-level="1.4" data-path="descrição-da-matéria.html"><a href="descrição-da-matéria.html#objetivos-do-curso"><i class="fa fa-check"></i><b>1.4</b> Objetivos do Curso</a></li>
+<li class="chapter" data-level="1.5" data-path="descrição-da-matéria.html"><a href="descrição-da-matéria.html#tinkercad"><i class="fa fa-check"></i><b>1.5</b> Tinkercad</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="projeto-final.html"><a href="projeto-final.html"><i class="fa fa-check"></i><b>2</b> Projeto Final</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="projeto-final.html"><a href="projeto-final.html#construção-do-projeto"><i class="fa fa-check"></i><b>2.1</b> Construção do Projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tópicos Especiais em Eletrônica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Tópicos Especiais em Eletrônica</h1>
+<p class="author"><em>Lucas Marcley Carvalho dos Santos</em></p>
+<p class="date"><em>2024-07-04</em></p>
+</div>
+<div id="descrição-da-matéria" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Descrição da Matéria<a href="descrição-da-matéria.html#descrição-da-matéria" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="local-e-horário" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Local e Horário<a href="descrição-da-matéria.html#local-e-horário" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Local: Laboratório FabLab Camtuc - Sala 53 UFPA<br />
+Horário: Segunda e Quarta-feira, das 14h às 15h40h</p>
+</div>
+<div id="sobre-a-matéria" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Sobre a Matéria<a href="descrição-da-matéria.html#sobre-a-matéria" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+A matéria de Tópicos Especiais em Eletrônica ira tratar sobre fabricação digital, ela esta sendo oferecida no FabLab Camtuc e é uma oportunidade para explorar as possibilidades da tecnologia moderna na criação e fabricação de objetos. Durante o curso, os discentes adquirão diversos conceitos sobre fabricação digital, aprendendo sobre algumas técnicas e ferramentas que permitem a realização de projetos criativos e funcionais.
+</p>
+</div>
+<div id="conteúdo-do-curso" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Conteúdo do Curso<a href="descrição-da-matéria.html#conteúdo-do-curso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Máquinas CNC</strong>: Os discentes serão introduzidos ao mundo das máquinas de controle numérico computadorizado (CNC), conhecendo técnicas de corte a laser, fresadora de circuitos impressão 3D e muito mais. Será feito o treinamento para operar essas máquinas com precisão para que possa ser fabricado peças de alta qualidade.</p></li>
+<li><p><strong>Corte a Lazer</strong>: Será apresentado a Router CNC lazer que é a máquina presente no laboratório, onde os discentes terão a oportunidade de entender os princípios por trás do maquinário e como criar projetos por meio do software que podem ser transformados em objetos físicos.</p></li>
+<li><p><strong>Impressão 3D</strong>: Uma parte fundamental do curso será dedicada à tecnologia de impressão 3D. Os discentes terão a oportunidade de entender os princípios por trás da impressão 3D e como criar modelos digitais que podem ser transformados em objetos físicos tridimensionais.</p></li>
+<li><p><strong>Softwares de Desenhos e Modelagem 3D</strong>: Serão apresentados e explorados alguns softwares de desenho e modelagem 3D, permitindo que os discentes desenvolvam suas habilidades de design e manipulação digital. Eles aprenderão a criar modelos virtuais que podem ser posteriormente fabricados usando as máquinas disponíveis no FabLab.</p></li>
+<li><p><strong>Fresadora de Circuitos</strong>: O curso também abordará a fresadora de circuito impresso, maquinário bastante utilizado no laboratório para criação de circuitos eletrônicos.</p></li>
+</ol>
+</div>
+<div id="objetivos-do-curso" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Objetivos do Curso<a href="descrição-da-matéria.html#objetivos-do-curso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+Ao final da matéria, os participantes terão adquirido habilidades práticas e conhecimento teórico que lhes permitirão:
+</p>
+<ul>
+<li>Utilizar máquinas CNC de forma eficaz para fabricação de peças precisas.</li>
+<li>Dominar o processo de impressão 3D e criar objetos personalizados.</li>
+<li>Manipular softwares de desenho e modelagem para criar projetos digitais.</li>
+<li>Compreender os princípios da modelagem 3D e aplicá-los na prática.</li>
+<li>Explorar uma variedade de técnicas de fabricação digital para realizar projetos criativos e inovadores.</li>
+</ul>
+<pre><code>
+
+
+
+&lt;!--chapter:end:index.Rmd--&gt;
+
+# Máquinas CNC
+
+&lt;p style=&#39;text-align: justify;&#39;&gt; As máquinas CNC (**Controle Numérico Computadorizado**) revolucionaram a indústria moderna, oferecendo precisão, eficiência e automação em uma variedade de processos de fabricação. Essas máquinas são equipadas com sistemas de controle computadorizado que permitem a execução de operações complexas de usinagem, corte, modelagem e outras tarefas com alta precisão e repetibilidade.&lt;/p&gt;
+
+## Origens 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A história das máquinas CNC remonta ao desenvolvimento dos primeiros sistemas de controle numérico nas décadas de 1940 e 1950. Inicialmente, esses sistemas eram controlados por **cartões perfurados** e, posteriormente, por **fitas magnéticas**, antes de evoluírem para computadores digitais nas décadas seguintes.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Hoje, as máquinas CNC abrangem uma ampla variedade de tipos e aplicações, desde tornos e fresadoras até cortadoras a laser e robôs industriais. Elas são essenciais em indústrias como a automotiva, aeroespacial, de fabricação de moldes, eletrônica, entre outras, onde a precisão e a automação são cruciais para a produção eficiente e de alta qualidade.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Com a crescente integração de tecnologias como inteligência artificial, aprendizado de máquina e Internet das Coisas (IoT), as máquinas CNC estão se tornando ainda mais avançadas, capazes de realizar operações complexas de forma autônoma e adaptativa, aumentando ainda mais sua importância na indústria moderna.&lt;/p&gt;
+
+## Teoria 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Atualmente, a usinagem CNC é um processo de fabricação popular com uma ampla gama de aplicações industriais. A usinagem CNC dos recursos atuais melhorou os recursos informatizados devido ao seu constante desenvolvimento. No entanto, vai muito além disso.&lt;/p&gt; 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Em essência, a usinagem CNC é um processo automatizado onde máquinas controladas por computador realizam operações de remoção de material em uma peça de trabalho. O funcionamento é relativamente simples, mas os resultados são extraordinários. Um programa de computador traduz os desenhos ou modelos CAD (**Computer-Aided Design**) em comandos específicos para a máquina CNC. Esses comandos controlam a velocidade, posição e movimento das ferramentas de corte, permitindo a criação de peças com tolerâncias extremamente apertadas e detalhes intricados.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Uma das maiores vantagens da usinagem CNC é a sua capacidade de produzir peças altamente precisas e consistentes em grandes volumes. Uma vez que o programa é configurado corretamente, a máquina CNC pode repetir o mesmo processo várias vezes, mantendo a qualidade em cada peça produzida. Isso torna a usinagem CNC ideal para a fabricação em massa de componentes padronizados, desde pequenas peças de metal até grandes estruturas de plástico.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Além da precisão, a usinagem CNC oferece uma flexibilidade incomparável. Com a capacidade de criar uma ampla variedade de formas e tamanhos, as possibilidades de design são praticamente ilimitadas. Desde peças simples até complexas, a usinagem CNC pode lidar com uma variedade impressionante de geometrias, tornando-a uma escolha popular em indústrias como automotiva, aeroespacial, médica e de eletrônicos.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Outro benefício crucial da usinagem CNC é a sua eficiência. Ao eliminar a necessidade de intervenção manual significativa, os tempos de produção são reduzidos drasticamente, levando a prazos mais curtos e custos mais baixos. Além disso, a automação proporcionada pela usinagem CNC minimiza erros humanos e aumenta a consistência, resultando em menos refugos e retrabalho.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;No entanto, é importante destacar que a usinagem CNC requer habilidades especializadas para **programação** e **operação das máquinas**. Os operadores devem ter conhecimento técnico sólido e familiaridade com software de CAD/CAM (**Computer-Aided Manufacturing**) para criar e otimizar programas de usinagem. Além disso, a **manutenção regular das máquinas CNC** é essencial para garantir um desempenho ótimo e prolongar sua vida útil.&lt;/p&gt;
+
+## Configurações da Máquina
+
+### Operação
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As máquinas de corte a laser são complexas e versáteis, utilizadas em várias indústrias para cortes precisos e detalhados. Elas operam em diferentes modos, como cartesiana, rotacional e cinco eixos. As máquinas cartesianas movem o cabeçote de corte ao longo dos eixos X e Y em um padrão retangular, oferecendo precisão e simplicidade. Máquinas rotacionais possuem um eixo adicional, permitindo cortes em objetos cilíndricos, como tubos e canos. Já as máquinas de cinco eixos, comuns em centros de usinagem avançados, movem o cabeçote em cinco direções, possibilitando cortes tridimensionais e formas complexas.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A estrutura de uma máquina de corte a laser inclui uma base robusta, geralmente de aço, que fornece estabilidade e suporte para todos os componentes. O pórtico pode ser fixo ou móvel, com pórticos fixos oferecendo maior rigidez e precisão, enquanto os móveis permitem uma área de corte maior e flexibilidade. A mesa de corte suporta o material a ser cortado, podendo ter superfícies ajustáveis ou sistemas de vácuo para segurar o material no lugar.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Os eixos das máquinas incluem guias cilíndricas ou retangulares que direcionam o movimento dos componentes móveis. Guias cilíndricas oferecem movimento suave e preciso, enquanto guias retangulares proporcionam maior resistência. Os suportes de guia mantêm as guias no lugar e garantem o alinhamento correto. Pillow blocks são suportes para eixos rotativos e rolamentos lineares permitem movimento suave ao longo das guias. Patins são componentes que deslizam ao longo das guias, suportando o cabeçote de corte e outros componentes móveis.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Os motores utilizados nas máquinas de corte a laser variam. Motores de passo movem-se em incrementos discretos, proporcionando controle preciso do movimento. Motores DC/Servo oferecem controle mais dinâmico e preciso, frequentemente utilizados em aplicações de alta performance. Motores AC são mais robustos e podem lidar com cargas maiores, embora sejam menos comuns em máquinas de corte a laser de precisão. Acopladores flexíveis permitem alguma flexibilidade entre eixos conectados, absorvendo desalinhamentos menores, enquanto acopladores de &quot;mandíbula&quot; conectam eixos sem folga, garantindo precisão no movimento.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A transmissão do movimento é feita através de correias conectadas por polias. Polias lisas proporcionam movimento suave, enquanto polias dentadas oferecem maior controle e precisão. O sistema Core XY controla ambos os eixos X e Y simultaneamente, proporcionando um movimento mais rápido e preciso. Fusos transformam movimento rotativo em linear, com castanhas e mancais fornecendo suporte e rolamentos garantindo movimento suave.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A eletrônica das máquinas inclui uma placa de controle que gerencia o funcionamento da máquina, recebendo comandos e controlando os motores e o laser. Drivers de motor controlam a corrente e a tensão fornecidas aos motores, garantindo operação precisa. A fonte de alimentação fornece energia para todos os componentes eletrônicos, enquanto sistemas de acionamento e controle de potência regulam a saída do laser, ajustando a intensidade conforme necessário para diferentes materiais e cortes.&lt;/p&gt;
+
+### Software
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O software utilizado inclui firmware embarcado que controla a operação básica da máquina, como o GRBL, um firmware open-source popular para máquinas CNC e de corte a laser. O G-Code é a linguagem de programação usada para controlar essas máquinas. Softwares de controle como Candle, Mach 3 e Linux CNC interpretam o G-Code e enviam comandos para a máquina.&lt;p style=&#39;text-align: justify;&#39;&gt;
+
+### Segurança
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As ferramentas das máquinas de corte a laser podem incluir spindles, fresas e brocas para usinagem, além de opções para impressão com filamento, resina, metal, concreto, argila ou materiais orgânicos. Tipos de lasers utilizados incluem CO2, fibra e diodo, cada um com suas próprias características e aplicações. Além do corte, essas máquinas podem realizar outras operações como costura, corte de vinil, soldagem e injeção de materiais.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A segurança é essencial na operação de máquinas de corte a laser. É importante usar equipamentos de proteção individual, como óculos, luvas, máscaras e vestimentas adequadas, para garantir a segurança durante a operação.&lt;/p&gt;
+
+
+&lt;!--chapter:end:01-maquinacnc.Rmd--&gt;
+
+
+# Desenho 2D e sua Aplicação na Usinagem CNC
+## Teoria
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O desenho 2D vetorial é uma forma de representação gráfica que utiliza formas geométricas definidas por equações matemáticas para criar imagens planas. Ao contrário dos formatos de imagem baseados em pixels, como o bitmap, onde as informações são representadas pixel por pixel, o desenho vetorial é baseado em coordenadas e instruções de desenho, o que permite uma escalabilidade sem perda de qualidade.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As máquinas de corte CNC, como lasers, vinis e fresadoras, utilizam desenhos 2D vetoriais para realizar operações precisas de corte e gravação em uma variedade de materiais, como **metais, plásticos, madeira e tecidos**. Essas máquinas são controladas por computador e seguem as instruções de corte fornecidas pelos desenhos vetoriais.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;No contexto da usinagem CNC, as operações possíveis com desenhos 2D vetoriais incluem **corte e rasterização**. O corte é realizado seguindo as linhas vetoriais definidas no desenho, enquanto a rasterização é usada para gravação ou marcação, onde a máquina percorre a área desejada em um padrão de varredura.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Além das operações padrão de corte e gravação, as máquinas CNC também podem incorporar **eixos rotativos** para realizar operações adicionais, como o corte de **peças cilíndricas** ou a gravação em **superfícies curvas**. Isso aumenta a versatilidade e as capacidades das máquinas de usinagem CNC.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Para criar desenhos 2D vetoriais, uma variedade de programas de design estão disponíveis, incluindo:&lt;/p&gt;
+
+- **Inkscape**: Uma poderosa ferramenta de design vetorial de código aberto, adequada para uma variedade de aplicações, desde design gráfico até desenhos técnicos para usinagem CNC.
+
+- **Corel Draw**: Um software popular entre designers gráficos e profissionais de marketing, conhecido por sua facilidade de uso e recursos avançados de ilustração vetorial.
+
+- **Adobe Illustrator**: Uma ferramenta líder no mercado para criação de gráficos vetoriais, amplamente utilizada em design de logotipos, ilustrações e arte vetorial para impressão e web.
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Os desenhos 2D vetoriais podem ser salvos em uma variedade de formatos, incluindo:&lt;/p&gt;
+
+- **PDF** (Portable Document Format): Um formato de arquivo amplamente utilizado para compartilhar documentos que preserva a qualidade e o layout do desenho vetorial.
+
+- **SVG** (Scalable Vector Graphics): Um formato de arquivo XML baseado em vetores amplamente utilizado para gráficos na web e compatível com a maioria dos navegadores modernos.
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Partindo para uma diferença entre desenho vetorial e bitmap, que é evidenciado principalmente na forma como as imagens são representadas. Enquanto o bitmap consiste em uma grade de pixels, onde cada pixel contém informações de cor, o desenho vetorial é baseado em equações matemáticas que descrevem formas geométricas, como linhas, curvas e círculos. Essa diferença fundamental permite que os desenhos vetoriais sejam dimensionados indefinidamente sem perda de qualidade, enquanto os bitmaps tendem a perder definição à medida que são ampliados.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;De modo geral, o desenho 2D vetorial desempenha um papel fundamental na usinagem CNC, fornecendo as instruções precisas necessárias para realizar operações de corte e gravação em uma ampla variedade de materiais. Sua natureza escalável e precisa, juntamente com a versatilidade das máquinas CNC, tornam essa combinação uma escolha poderosa para a fabricação moderna em diversas indústrias.&lt;/p&gt;
+
+&lt;!--chapter:end:02-Desenho2D.Rmd--&gt;
+
+# Corte a Lazer 
+
+## Teoria 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Uma máquina de corte a laser opera através de um processo complexo que envolve diversas etapas para cortar, gravar ou marcar uma variedade de materiais. Tudo começa com a geração do **feixe laser** em um dispositivo especializado, como um tubo de **gás CO2** ou uma fonte de estado sólido, onde a energia elétrica é convertida em luz coerente. Esse feixe laser é então amplificado e direcionado para a cabeça de corte através de **espelhos e lentes**, onde é focalizado em um ponto muito pequeno para garantir cortes precisos.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Com a peça de trabalho posicionada na mesa da máquina, o feixe laser é movido ao longo das coordenadas **X, Y e Z**, seguindo um caminho específico determinado pelo desenho ou programa fornecido. Quando o feixe atinge a superfície do material, ele é absorvido e convertido em calor, levando o material a temperaturas extremamente altas. Dependendo das propriedades do material e dos parâmetros de corte ajustados, pode ocorrer fusão, vaporização ou ablação do material.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Para garantir resultados precisos e consistentes, vários parâmetros como potência do laser, velocidade de corte e taxa de alimentação são cuidadosamente controlados e ajustados de acordo com o tipo e a espessura do material. Além disso, sistemas de resfriamento, como fluxos de ar ou líquido refrigerante, são utilizados para dissipar o calor gerado durante o processo de corte, enquanto os resíduos são extraídos da área de trabalho para garantir uma operação limpa e segura.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Ao concluir o trajeto de corte conforme o programa, o feixe laser é desligado e a peça de trabalho é removida da máquina. Dependendo da aplicação, podem ser necessários processos adicionais, como limpeza ou acabamento das peças cortadas.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O corte à laser é um dos processos mais versáteis disponível no laboratório FabLab. Trata-se de um método de **manufatura subtrativa**, no qual um feixe de laser de alta potência é aplicado a um material para remover massa, permitindo cortes precisos ou gravações detalhadas na superfície.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O termo &quot;**corte**&quot; é reservado para processos em que o laser remove completamente o material, separando-o em duas partes distintas. Por outro lado, a &quot;**gravação**&quot; refere-se a trabalhos em baixa potência que apenas marcam a superfície do material, sem produzir um relevo significativo. Essa distinção é importante para fins de design e aplicação.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A máquina disposta no Fablab apresenta uma área de trabalho de 60cm por 40cm e potência máxima de corte de 80W. Como ja mencionado, a máquina a Laser do laboratório é de gás CO2, no entanto existem outros tipos de lasers, como diodo, estado sólido, fibra e lasers de outros gases, cada um com suas próprias características e aplicações específicas.&lt;/p&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/laser.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+&lt;center&gt;Fig 1: Máquina Router Laser CNC VS6040 Corte e Gravação&lt;/center&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/arealaser.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+&lt;center&gt;Fig 2: Área de trabalho Máquina&lt;/center&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/bico.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+&lt;center&gt;Fig 3: Bico do laser&lt;/center&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/painellaser.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+&lt;center&gt;Fig 4: Painel de comando e ajuste da mesa&lt;/center&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/painel2.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+&lt;center&gt;Fig 5: Painel de controle de potência&lt;/center&gt;
+
+
+## Tipos de Máquinas e Materiais
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Quanto aos materiais, o corte à laser é particularmente eficaz em materiais como **madeira e acrílico**. Além disso, é possível gravar em uma variedade ainda mais ampla de materiais, incluindo **couro, jeans, tecidos não inflamáveis, aço inox e alumínio**. No entanto, é crucial observar que materiais derivados de petróleo nunca devem ser trabalhados em máquinas à laser, devido à liberação de vapores tóxicos durante o processo.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O corte à laser representa uma ferramenta poderosa na manufatura moderna, oferecendo precisão, versatilidade e eficiência em uma variedade de aplicações. Com a capacidade de cortar uma ampla gama de materiais e realizar gravações detalhadas, é uma tecnologia indispensável em FabLabs e em muitos outros ambientes de fabricação, impulsionando a criatividade e a inovação em todo o mundo.&lt;/p&gt;
+
+## Prática 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Para a prática de utilização da máquina de **corte a laser**, foi sugerido o modelo de uma **caixa** utilizando um projeto do site **MakerCase**. **MakerCase** é uma plataforma online que permite aos usuários criar caixas personalizadas ajustando dimensões e outros parâmetros, gerando automaticamente os arquivos necessários para o corte a laser.&lt;/p&gt;
+
+O modelo de caixa no **MakerCase** é uma excelente introdução às técnicas de corte a laser, pois inclui diversas características que demonstram a precisão e versatilidade da máquina. O site permite que você ajuste o tamanho, a espessura do material e o tipo de junta que deseja utilizar, como encaixes de dedo ou entalhes de encaixe simples.
+
+O processo começa com a personalização do modelo no **MakerCase**. Após definir as dimensões da caixa e as especificações do material, o site gera automaticamente um arquivo no formato **svg** ou **dxf**, compatível com a maioria dos softwares de corte a laser. Depois de importar o arquivo para o software de controle da máquina, ajustei as configurações do **laser**, como potência e velocidade, de acordo com o material utilizado. No meu caso, pode ser utilizado um **papelão de 3mm**, um material comum e fácil de cortar com precisão. Na figura abaixo, podemos visualizar a tabela de potências de acordo com cada material.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/tabela_pot.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 6: Tabela de potências de acordo com o material.&lt;/center&gt;
+
+
+Uma vez que as configurações estão ajustadas, o próximo passo é posicionar a folha de **MDF** na mesa de corte da máquina, garantindo que esteja fixa para evitar qualquer movimento durante o corte. Em seguida, o software gera o **G-Code**, que é enviado para a máquina para iniciar o corte.
+
+O corte a laser segue o contorno exato do modelo, criando as peças com bordas limpas e precisas. Após o corte, as peças são removidas da máquina e qualquer resíduo ou chamuscado pode ser limpo com uma lixa fina. Podemos visualizar a interface do software **K40 Whisperer** utilizado para fazer a comunicação com a máquina.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/K40.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 7: Interface do software K40 Whisperer.&lt;/center&gt;
+
+A peça para o corte pode ser vista na figura abaixo, foi uma peça simples, apenas para verificação e exemplo.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/peca.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 8: Máquina cortando a peça.&lt;/center&gt;
+
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/pratica.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 9: Peça cortada.&lt;/center&gt;
+
+
+&lt;!--chapter:end:03-cortealaser.Rmd--&gt;
+
+# Desenho 3D 
+
+## Teoria
+
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Desenho 3D** compreende desenhos feitos em software **CAD** (Computer-Aided Design) para descrever objetos tridimensionais que podem ser impressos com manufatura aditiva ou fabricados com usinagem (manufatura subtrativa).&lt;/p&gt;
+
+Tal como no desenho 2D, no **desenho 3D** temos descrições **vetoriais** e **bitmap**.
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A descrição **vetorial** é, da mesma forma que o 2D, um arquivo de código contendo informações sobre a geometria 3D do objeto. No entanto, a descrição é bem mais complicada, pois as operações 3D são mais complexas do que aquelas feitas no plano, por exemplo, **extrusão**, **corte**, etc.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Arquivos **bitmap** 3D são menos comuns, mas tendem a se tornar menos raros à medida que a tecnologia de **escaneamento 3D** baratear. A menor unidade de informação de um sólido bitmap é chamada de **voxel** (ao invés de pixel).&lt;/p&gt;
+
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Na prática, o desenho 3D começa com a escolha de um software CAD adequado às necessidades do projeto. **Solidworks**, **FreeCad** e **Autodesk Fusion** são algumas das opções mais populares e cada um oferece um conjunto específico de ferramentas e funcionalidades para a criação de modelos 3D.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Solidworks** é amplamente utilizado na indústria devido à sua interface intuitiva e poderosas capacidades de modelagem. Ele suporta uma vasta gama de operações 3D, desde simples extrusões até complexas montagens de múltiplos componentes. Além disso, o Solidworks possui ferramentas avançadas para simulação e análise, permitindo aos engenheiros validar seus projetos antes da fabricação.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**FreeCad** é uma opção open-source que oferece flexibilidade e uma ampla gama de módulos para diferentes tipos de projetos. Embora possa ter uma curva de aprendizado mais acentuada, é uma excelente escolha para quem busca uma alternativa gratuita e altamente personalizável para desenho 3D.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Autodesk Fusion 360** combina funcionalidades robustas de CAD com capacidades de CAM (Computer-Aided Manufacturing) e CAE (Computer-Aided Engineering) em uma única plataforma baseada na nuvem. Isso facilita a colaboração em equipe e o acesso aos projetos a partir de qualquer lugar. Fusion 360 é especialmente popular entre designers e engenheiros que trabalham em startups e pequenas empresas devido ao seu modelo de licenciamento acessível e integração com outras ferramentas da Autodesk.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A criação de um modelo 3D geralmente começa com esboços bidimensionais, que são então transformados em formas tridimensionais através de operações como **extrusão**, **revolução**, **varredura** e **lofting**. Essas operações permitem construir formas complexas a partir de perfis simples. Além disso, o software CAD oferece ferramentas para aplicar fillet (arredondamento), chamfer (chanfro) e outras modificações geométricas para refinar o modelo.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Após a modelagem, o arquivo 3D pode ser exportado em formatos compatíveis com impressoras 3D ou máquinas de usinagem CNC, como **STL**, **OBJ** ou **STEP**. Para manufatura aditiva, o modelo é fatiado em camadas finas que a impressora 3D constrói uma a uma. Para manufatura subtrativa, o software CAM gera o código G necessário para que a máquina CNC execute as operações de corte e fresagem.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A prática do desenho 3D não só envolve habilidades técnicas de uso do software, mas também um entendimento profundo dos princípios de engenharia e design, garantindo que os modelos criados sejam funcionais, fabricáveis e atendam às especificações do projeto.&lt;/p&gt;
+
+## Prática 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Foi desenhado uma peça quadrada com um furo no meio no Fusion 360, que foi realizado seguindo os seguintes passos. &lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Comece abrindo o software e criando um novo projeto, salvando-o com um nome adequado para facilitar a organização. Em seguida, clique no ícone de &quot;Create Sketch&quot; na barra de ferramentas e escolha o plano onde deseja criar o esboço, como o plano XY. Selecione a ferramenta &quot;Rectangle&quot; (Retângulo) no menu de esboço, clique em um ponto no plano para definir o primeiro vértice do quadrado e arraste o mouse para definir a segunda esquina, inserindo as dimensões de 50mm x 50mm para criar um quadrado perfeito.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Após desenhar o quadrado, use a ferramenta &quot;Dimension&quot; para garantir que os lados do quadrado tenham exatamente 50mm, ajustando as dimensões conforme necessário. Em seguida, selecione a ferramenta &quot;Circle&quot; (Círculo) no menu de esboço e clique no centro do quadrado para desenhar um círculo. Defina o diâmetro do círculo, por exemplo, 20mm, inserindo o valor nas dimensões exibidas ao lado do círculo.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Depois de definir as dimensões do círculo, finalize o esboço clicando no botão &quot;Finish Sketch&quot;. Para extrudar o quadrado e transformá-lo em um objeto 3D, selecione a ferramenta &quot;Extrude&quot; no menu de modelagem, clique na área do quadrado e insira a altura desejada, como 10mm. Certifique-se de que o círculo no centro não seja extrudado, deixando o furo conforme o planejado.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Revise o modelo 3D para garantir que todas as dimensões e características estejam corretas. Se necessário, faça ajustes utilizando as ferramentas de edição disponíveis no Fusion 360. Após confirmar que o modelo está correto, salve o projeto e exporte o arquivo no formato desejado, como STL ou STEP, para uso em impressão 3D ou usinagem CNC.&lt;/p&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/fusion.jpg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 10: Peça com furo feita no Fusion 360.&lt;/center&gt;
+
+
+
+&lt;!--chapter:end:04-desenho3D.Rmd--&gt;
+
+# Impressão 3D
+
+## Teoria 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A **impressão 3D** é um processo que tem ganhado destaque recentemente devido ao barateamento das impressoras de mesa. O nome técnico correto é **manufatura aditiva por deposição de filamento**. Este processo envolve a criação de objetos tridimensionais através da adição sequencial de material em camadas, ao contrário da **manufatura subtrativa**, que remove material de um bloco maior para formar o objeto final.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A **manufatura aditiva** é um processo onde o objeto é fabricado a partir de deposição de pequenas quantidades de material sobre uma base que é progressivamente construída. Esse método oferece várias vantagens em comparação à manufatura subtrativa, incluindo a redução significativa de resíduos, a capacidade de criar geometria complexa que seria impossível ou impraticável com métodos tradicionais, e a eficiência em termos de materiais e energia.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Na manufatura aditiva, a **cadeia de produção** começa com a criação de um modelo digital em um software CAD (Computer-Aided Design). Este modelo é então fatiado em camadas finas usando um software específico, gerando um arquivo contendo instruções para a impressora 3D. Durante o processo de impressão, a máquina deposita material camada por camada até que o objeto completo esteja formado.&lt;/p&gt;
+
+### Tipos de Impressão 3D
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A **impressão 3D por deposição de filamento**, ou FDM (Fused Deposition Modeling), é a forma mais comum de impressão 3D em pequena escala. Neste processo, um filamento de material termoplástico é aquecido até se tornar maleável e então extrudido através de um bico que se move de acordo com as instruções do modelo digital. À medida que o filamento é depositado, ele esfria e solidifica, formando camadas sucessivas que resultam no objeto final.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Além da impressão por deposição de filamento, existem outros tipos importantes de impressão 3D, cada um com suas próprias características e aplicações:&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Impressão de Resina (Fotopolimerização):**
+Também conhecida como **SLA** (Stereolithography) ou **DLP** (Digital Light Processing), este processo utiliza uma resina líquida que é solidificada camada por camada por meio de uma fonte de luz, como um laser ou um projetor de luz ultravioleta. A fotopolimerização oferece alta precisão e detalhamento, sendo ideal para protótipos complexos e peças pequenas.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Impressão com Pó:**
+Este método, que inclui tecnologias como **SLS** (Selective Laser Sintering) e **Binder Jetting**, envolve a deposição de uma camada fina de pó que é seletivamente fundida ou aglutinada por um laser ou agente de ligação. O excesso de pó serve como suporte durante a impressão, permitindo a criação de estruturas complexas sem necessidade de suportes adicionais. Este método é adequado para uma ampla gama de materiais, incluindo metais, plásticos e cerâmicas.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Impressão com Solda:**
+Neste processo, materiais metálicos são derretidos e depositados camada por camada usando um bico de solda. A **impressão com solda** é particularmente útil para a fabricação de peças metálicas grandes e robustas, e é frequentemente usada em aplicações industriais onde a resistência mecânica é crítica.&lt;/p&gt;
+
+### Vantagens da Impressão 3D
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A impressão 3D oferece várias vantagens significativas sobre os métodos tradicionais de fabricação. A capacidade de criar protótipos rápidos permite um ciclo de desenvolvimento mais ágil, onde designers e engenheiros podem iterar rapidamente suas ideias. Além disso, a personalização em massa é facilitada, permitindo a produção de peças únicas ou personalizadas sem a necessidade de moldes caros.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Outra vantagem é a possibilidade de criar geometria complexa e formas orgânicas que seriam impossíveis com métodos de manufatura tradicionais. Estruturas internas complexas, canais de resfriamento internos e outras características sofisticadas podem ser integradas diretamente no processo de design e fabricação.&lt;/p&gt;
+
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Apesar de suas muitas vantagens, a impressão 3D também enfrenta alguns desafios. A qualidade superficial das peças pode não ser tão alta quanto a obtida com métodos tradicionais, e a resistência mecânica das peças impressas pode ser inferior devido à natureza camada-a-camada do processo. Além disso, a velocidade de impressão pode ser um fator limitante em comparação com métodos de produção em massa.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;No entanto, a pesquisa e o desenvolvimento contínuos na área de impressão 3D estão constantemente abordando esses desafios. Novos materiais, técnicas de impressão mais rápidas e precisas, e melhorias no software estão expandindo as capacidades da impressão 3D. À medida que a tecnologia evolui e se torna mais acessível, espera-se que a impressão 3D desempenhe um papel cada vez mais importante na manufatura moderna, transformando como produtos são projetados, prototipados e produzidos.&lt;/p&gt;
+
+## Prática
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Para a prática sobre impressão 3D, comecei selecionando um desenho no site **Thingiverse**, uma plataforma popular para compartilhamento de modelos 3D. Thingiverse oferece uma ampla variedade de projetos, desde simples utilitários domésticos até complexas figuras decorativas. O modelo escolhido foi baixado no formato **.stl**, um formato padrão para arquivos 3D.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Depois de baixar o modelo, utilizei o software **Ultimaker Cura** para preparar o arquivo para impressão. O Ultimaker Cura é um software de fatiamento, ou seja, ele converte o modelo 3D em camadas finas que a impressora 3D pode construir uma a uma. Primeiramente, importei o arquivo .stl para o Cura. Em seguida, ajustei as configurações de impressão, como altura da camada, densidade de preenchimento e temperatura do bico. Essas configurações dependem do tipo de material utilizado, que no meu caso foi **PLA**.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Com todas as configurações ajustadas, o Cura gerou o **G-code**, que contém as instruções específicas para a impressora 3D seguir durante o processo de impressão. Este arquivo foi então salvo em um cartão SD.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O próximo passo foi inserir o cartão SD na **impressora 3D** e iniciar o processo de impressão. A impressora começou a trabalhar, depositando camada por camada de filamento fundido conforme as instruções do G-code. Durante o processo, monitorei a impressão para garantir que tudo estivesse ocorrendo conforme o planejado, ajustando a temperatura e a velocidade de impressão se necessário.&lt;/p&gt;.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/imp3.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 11: Impressora 3D do laboratório.&lt;/center&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Após a conclusão da impressão, aguardei uns segundos antes de removê-la da plataforma de impressão para evitar deformações. O resultado final foi uma peça com detalhes precisos e uma superfície razoavelmente lisa, demonstrando a eficiência da combinação de um bom modelo 3D, um software de fatiamento eficaz como o Ultimaker Cura, e uma impressora 3D bem calibrada.&lt;/p&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/imp1.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 12: Impressora 3D no processo.&lt;/center&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/imp2.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 13: Impressora 3D.&lt;/center&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Essa prática de impressão 3D ilustrou claramente as etapas envolvidas desde a escolha do modelo até a produção do objeto físico, além de destacar a importância das configurações corretas e do monitoramento durante o processo de impressão.&lt;/p&gt;
+
+
+
+&lt;!--chapter:end:05-impressao.Rmd--&gt;
+
+# Soldagem Eletrônica
+
+## Teoria
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Soldagem eletrônica** é um processo fundamental na fabricação e montagem de circuitos eletrônicos. Este tipo de soldagem envolve a junção de componentes eletrônicos a uma placa de circuito impresso (PCI) usando uma liga de estanho, frequentemente combinada com chumbo, prata ou cobre, para criar conexões elétricas permanentes e de baixa resistência.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Os **circuitos impressos** (PCIs) são essenciais para a interligação de módulos eletrônicos e circuitos integrados, permitindo a realização de funções eletrônicas complexas, sejam elas digitais ou analógicas. Ao contrário dos circuitos montados em **protoboards**, que são utilizados principalmente para prototipagem e testes, os circuitos em PCIs oferecem confiabilidade e durabilidade superiores. Protoboards são suscetíveis a problemas de mau contato e não são adequados para produtos finais devido à sua natureza temporária e instável.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A soldagem eletrônica garante que os componentes estejam firmemente fixados à PCI, proporcionando conexões estáveis e duráveis. Saber soldar corretamente é crucial não apenas para a construção de circuitos personalizados, mas também para a manutenção e reparo de dispositivos eletrônicos.&lt;/p&gt;
+
+## Processo de Soldagem Eletrônica
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O processo de soldagem eletrônica envolve várias etapas e a utilização de ferramentas específicas:&lt;/p&gt;
+
+**1. Ferramentas e Materiais:**
+
+- **Ferro de Solda:** Ferramenta aquecida que é usada para derreter a liga de solda.
+- **Liga de Solda:** Material usado para fazer a conexão elétrica. A liga mais comum é uma mistura de estanho e chumbo (60/40), embora ligas sem chumbo, como estanho-prata-cobre (SAC), estejam se tornando mais populares devido a regulamentações ambientais.
+- **Fluxo:** Substância química que ajuda a limpar e preparar a superfície para soldagem, promovendo a aderência da solda.
+- **Sugador de Solda e Malha Dessoldadora:** Ferramentas usadas para remover solda excessiva ou corrigir erros de soldagem.
+
+**2. Preparação:**
+
+Antes de iniciar a soldagem, é importante preparar a PCI e os componentes. Isso inclui a limpeza das superfícies de contato para remover qualquer oxidação ou sujeira que possa impedir a aderência da solda. O fluxo é aplicado nas áreas a serem soldadas para melhorar a qualidade da junção.
+
+**3. Técnicas de Soldagem:**
+
+- **Aquecimento:** O ferro de solda é aquecido até a temperatura adequada (geralmente entre 350°C e 400°C). A ponta do ferro de solda deve ser limpa regularmente em uma esponja úmida para remover resíduos de solda e fluxo.
+- **Aplicação de Solda:** A ponta do ferro de solda é colocada em contato com a junta a ser soldada, aquecendo tanto o terminal do componente quanto a trilha da PCI. Em seguida, a liga de solda é alimentada na junta aquecida, derretendo e fluindo para formar a conexão.
+- **Resfriamento:** Após a aplicação da solda, a junta deve ser deixada para esfriar naturalmente, solidificando a conexão. É importante evitar movimentos bruscos durante este processo para não comprometer a integridade da solda.
+
+**4. Verificação:**
+
+Depois de completar a soldagem, é crucial inspecionar as juntas de solda para garantir que estejam bem formadas, brilhantes e livres de defeitos como rachaduras, bolhas ou excesso de solda. Juntas frias ou mal formadas podem levar a falhas de conexão e devem ser reheated e corrigidas.
+
+## Prática 
+
+Durante a prática, foi disponibilizado uma placa de circuito impresso para treinamento, onde esta seneo inserido e removido alguns componenetes, como pode-se observar nas figuras abaixo.
+
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/sod1.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 14: Soldagem na PCI.&lt;/center&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/sod2.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 15: Solgadem na PCI.&lt;/center&gt;
+
+
+&lt;!--chapter:end:06-Soldagem.Rmd--&gt;
+
+# Circuito Impresso
+## Teoria
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A fabricação de circuitos impressos (PCBs, do inglês Printed Circuit Boards) é fundamental para o desenvolvimento de dispositivos eletrônicos, pois permite a criação de interconexões estáveis e compactas entre componentes eletrônicos. Os métodos mais comuns para a fabricação de PCBs são a corrosão química e a usinagem mecânica.&lt;/p&gt;
+
+### Corrosão
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O processo de corrosão é um método tradicional e amplamente utilizado. Inicialmente, utiliza-se uma placa base, geralmente feita de fibra de vidro revestida com uma fina camada de cobre. O layout do circuito é então transferido para a placa através de um processo fotossensível, onde uma máscara de proteção (geralmente um fotomáscara) é aplicada. A placa é imersa em uma solução química, como percloreto de ferro, que dissolve o cobre exposto, deixando apenas as trilhas protegidas pela máscara. &lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Após a corrosão, a máscara de proteção é removida, revelando as trilhas de cobre que formam o circuito. Em seguida, são perfurados os furos necessários para a montagem dos componentes. Por fim, aplica-se uma camada de estanho ou outro material para proteger as trilhas de cobre e facilitar a soldagem dos componentes.&lt;/p&gt;
+
+### Usiangem 
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Por outro lado, o processo de usinagem, embora mais trabalhoso e caro, oferece vantagens ecológicas por gerar menos resíduos químicos. Esse método também começa com uma placa de base revestida de cobre. O layout do circuito é programado em uma máquina CNC (Controle Numérico Computadorizado). A máquina CNC remove mecanicamente o cobre indesejado, deixando as trilhas desejadas intactas. A própria máquina CNC pode perfurar os orifícios necessários para a montagem dos componentes. Tal como no processo de corrosão, uma camada protetora é aplicada antes da soldagem dos componentes&lt;/p&gt;.
+
+### Produção de um circuito impresso
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A produção de PCBs, mesmo em escala semi-profissional, envolve um fluxo de trabalho bem definido, que pode ser dividido em várias etapas. O processo começa com o projeto do esquemático lógico, onde se define a conexão lógica entre os componentes eletrônicos. Utilizam-se softwares especializados, como o Eagle ou o KiCad, para desenhar o esquemático. Com base no esquemático, desenha-se o layout das trilhas e a posição dos furos na placa. Ferramentas de software ajudam a otimizar o traçado das trilhas para minimizar interferências e maximizar a eficiência do circuito.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Em seguida, prepara-se a placa para os processos subsequentes. No caso de usinagem, isso envolve definir o plano de corte que a máquina CNC seguirá. Seja por corrosão ou usinagem, a próxima etapa resulta na criação física das trilhas e furos na placa. Em placas de dupla-face, vias são utilizadas para conectar trilhas entre as duas faces da placa. Isso é feito através de furações revestidas. Uma máscara de solda pode ser aplicada para proteger áreas da placa onde não se deseja que a solda adira, ajudando a prevenir curtos-circuitos e facilitando a soldagem. &lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Os componentes eletrônicos são então posicionados e soldados nas suas respectivas posições. A soldagem pode ser feita manualmente ou através de máquinas de soldagem por onda. Finalmente, uma camada de silk-screen é impressa na placa para rotular componentes e fornecer outras informações úteis, como o logo do fabricante e o número da versão do PCB.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A fabricação de PCBs combina design eletrônico com técnicas de fabricação para produzir placas que são a base de praticamente todos os dispositivos eletrônicos modernos. A escolha entre corrosão e usinagem depende de fatores como custo, volume de produção e preocupações ambientais. Em ambos os casos, seguir um fluxo de trabalho bem definido e utilizar ferramentas de software adequadas é essencial para garantir a qualidade e a confiabilidade dos circuitos impressos produzidos. Além disso, a constante evolução das tecnologias de fabricação e dos materiais utilizados promete continuar melhorando a eficiência e a sustentabilidade dos processos de fabricação de PCBs, tornando-os ainda mais adequados para as necessidades do mercado atual e futuro.&lt;/p&gt;
+
+Na figura abaixo, pode-se perceber um circuito impresso simples que foi produzido durante a prática, observa-se a trinha e os furos feitos na placa. A placa também foi usada para a prática de soldagem, feito no capítulo anterior.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/cir1.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 16: Circuito impresso simples.&lt;/center&gt;
+
+
+
+
+&lt;!--chapter:end:07-circuito.Rmd--&gt;
+
+# Plotter
+## Teoria
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Uma plotter é uma impressora especializada utilizada principalmente para a produção de gráficos de grandes dimensões, como plantas arquitetônicas, mapas, gráficos de engenharia e sinalizações. Diferente das impressoras tradicionais, as plotters desenham linhas contínuas em vez de pontos individuais, o que lhes permite produzir desenhos com alta precisão e detalhes finos.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As primeiras plotters, desenvolvidas nos anos 1950 e 1960, utilizavam braços mecânicos para movimentar canetas sobre o papel. Com o avanço da tecnologia, surgiram plotters de jato de tinta e a laser, que substituíram as canetas por cabeçotes de impressão e feixes de laser, respectivamente.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Existem vários tipos de plotters, cada um com suas características específicas. A plotter de caneta, também conhecida como plotter vetorial, usa uma caneta para desenhar no papel, movendo-se ao longo dos eixos X e Y. Este tipo é ideal para desenhos de linhas, como plantas arquitetônicas e diagramas técnicos, oferecendo alta precisão e capacidade de criar desenhos detalhados, embora a velocidade de impressão seja relativamente lenta.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A plotter de jato de tinta, ou raster, utiliza cartuchos de tinta para pulverizar tinta sobre o papel, semelhante a uma impressora a jato de tinta convencional, mas em maior escala. Esse tipo pode imprimir em cores e é mais rápido que a plotter de caneta, embora ofereça menor precisão em desenhos vetoriais.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A plotter de corte, em vez de desenhar, utiliza uma lâmina para cortar materiais como vinil, papelão e tecido. Este tipo é amplamente usado na fabricação de adesivos, decalques e sinalizações, mas é limitado a tarefas de corte e não pode imprimir.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Já a plotter a laser usa um feixe de laser para desenhar ou cortar materiais, sendo altamente precisa e rápida, capaz de trabalhar com materiais mais duros. No entanto, é mais cara e requer manutenção especializada.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;Os componentes principais de uma plotter incluem a cabeça de impressão/corte, que realiza o desenho ou corte; os eixos de movimento (X e Y), responsáveis pelo movimento da cabeça de impressão/corte sobre o material; a superfície de impressão/corte, onde o material é colocado; e o controlador eletrônico, que interpreta os comandos enviados do computador e move a cabeça de impressão/corte de acordo.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As plotters são usadas em diversas indústrias devido à sua capacidade de produzir gráficos de grandes dimensões com alta precisão. Na arquitetura e engenharia, são usadas para imprimir plantas, diagramas técnicos e mapas. Na publicidade e design gráfico, produzem banners, cartazes e sinalizações. Na moda e têxtil, são usadas para cortar padrões em tecido e outros materiais. Na automotiva e manufatura, ajudam na criação de protótipos e peças personalizadas.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As principais vantagens das plotters incluem alta precisão e qualidade de impressão/corte, capacidade de trabalhar com grandes formatos e versatilidade para diversas aplicações e materiais. No entanto, elas também apresentam desvantagens, como custo elevado de aquisição e manutenção, necessidade de espaço físico significativo e necessidade de operadores treinados para manuseio e manutenção adequada.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;As plotters são ferramentas essenciais em muitos setores devido à sua capacidade de produzir gráficos detalhados e de grande escala. Com a evolução tecnológica, tornaram-se mais versáteis e eficientes, atendendo a uma ampla gama de necessidades industriais e comerciais.&lt;/p&gt;
+
+## Prática 
+
+A figura 17 mostra a plotter que foi utilizada para prática da atividade.
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/plot1.jpeg){width=60% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 17: Plotter disposta no Fablab.&lt;/center&gt;
+
+Na figura 18, o software que faz a comunicação com a plotter, juntamente com o desenho proposto que foi usado para teste.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/plot2.jpeg){width=60% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 19: Desenho no software.&lt;/center&gt;
+E na figura 19, pode-se observar o resultado do corte da plotter.
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/plot3.jpeg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 19: Corte da plotter.&lt;/center&gt;
+
+
+
+&lt;!--chapter:end:08-plotter.Rmd--&gt;
+
+# Arduino e Programação
+
+## Teoria
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O Arduino foi criado em 2005 por um grupo de estudantes e professores do Instituto de Design de Interação de Ivrea, na Itália. Seu objetivo era fornecer uma plataforma de baixo custo e fácil de usar para estudantes e entusiastas de eletrônica. A filosofia do Arduino é baseada em três princípios: acessibilidade, facilidade de uso e comunidade colaborativa.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O Arduino é uma plataforma de prototipagem eletrônica de código aberto baseada em hardware e software fáceis de usar. É projetada para tornar a eletrônica mais acessível a todos, desde iniciantes até profissionais. A plataforma Arduino permite a criação de projetos eletrônicos interativos, onde sensores e atuadores são controlados por um microcontrolador programável.&lt;p style=&#39;text-align: justify;&#39;&gt;
+
+
+### Componentes Básicos do Arduino
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Placas Arduino**: As placas Arduino vêm em várias formas e tamanhos, cada uma adequada para diferentes tipos de projetos: Arduino Uno, Mega e nano são os mais comuns.&lt;/p&gt;
+
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**O microcontrolador**: È o &quot;cérebro&quot; da placa Arduino. Ele executa o código carregado na placa e controla as interações entre os diferentes componentes conectados. Os microcontroladores mais comuns nas placas Arduino são os da série ATmega da Atmel.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Pinos de Entrada/Saída**: As placas Arduino possuem pinos de entrada/saída (I/O) que podem ser configurados como digitais ou analógicos. Esses pinos são usados para conectar sensores, atuadores e outros dispositivos. Os **Pinos Digitais** são Usados para ler ou enviar sinais digitais (0 ou 5V). E os **Pinos Analógicos** são Usados para ler sinais analógicos (0-1023) ou enviar sinais PWM.&lt;/p&gt;
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;**Fonte de Alimentação**: As placas Arduino podem ser alimentadas via USB ou através de uma fonte externa (bateria ou adaptador AC-DC). A maioria das placas possui um regulador de tensão que garante que a alimentação fornecida ao microcontrolador seja estável.&lt;/p&gt;
+
+### Ambiente de Desenvolvimento Arduino (IDE)
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;O Arduino IDE (Integrated Development Environment) é o software usado para escrever, compilar e carregar programas (chamados sketches) nas placas Arduino. Ele é projetado para ser fácil de usar, mesmo para aqueles sem experiência prévia em programação.&lt;/p&gt;
+
+![ ](C:/Users/gohan/OneDrive/Documentos/TEE/Lucas/ard1.jpg){width=50% style=&quot;display:block; margin:0 auto;&quot;}
+
+&lt;center&gt;Fig 20: Arduino IDE.&lt;/center&gt;
+
+## Linguagem de Programação Arduino
+
+&lt;p style=&#39;text-align: justify;&#39;&gt;A programação Arduino é baseada em uma linguagem derivada do C/C++, simplificada para facilitar o uso. Um sketch Arduino possui duas funções principais:&lt;/p&gt;
+
+1. **setup()**: Executada uma vez no início, usada para configurar pinos de I/O e outras configurações iniciais.
+2. **loop()**: Executada repetidamente, contém o código principal do programa.
+
+### Estrutura Básica de um Sketch
+
+```cpp
+void setup() {
+  // Configurações iniciais
+}
+
+void loop() {
+  // Código principal que será executado repetidamente
+}</code></pre>
+<p style="text-align: justify;">
+O Arduino possui uma vasta coleção de bibliotecas que facilitam a interface com diversos sensores, atuadores e outros dispositivos. As bibliotecas fornecem funções e métodos pré-definidos que simplificam a programação de tarefas complexas.
+</p>
+<p style="text-align: justify;">
+A comunicação entre o Arduino e outros dispositivos é fundamental para muitos projetos. O Arduino suporta diversos protocolos de comunicação, como serial, I2C e SPI.
+</p>
+<p style="text-align: justify;">
+A comunicação serial é uma das formas mais comuns de comunicação com o Arduino. Utiliza os pinos RX (receber) e TX (transmitir) e permite a troca de dados entre o Arduino e outros dispositivos, como um computador.
+</p>
+<ul>
+<li><strong>Serial.begin(baudrate)</strong>: Inicializa a comunicação serial com uma taxa de transmissão específica.</li>
+<li><strong>Serial.print() / Serial.println()</strong>: Envia dados para o monitor serial.</li>
+<li><strong>Serial.read() / Serial.available()</strong>: Lê dados recebidos.</li>
+</ul>
+<p>A programação direcionada ao Arduino é uma habilidade poderosa que permite transformar ideias em realidade. A plataforma Arduino, com sua combinação de hardware acessível e software fácil de usar, é ideal para iniciantes e profissionais. Desde projetos educacionais simples até aplicações complexas em automação, robótica e IoT, o Arduino oferece uma base sólida para a inovação eletrônica. Com uma compreensão profunda do hardware e software do Arduino, você estará bem equipado para explorar as infinitas possibilidades dessa incrível plataforma.</p>
+</div>
+<div id="tinkercad" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Tinkercad<a href="descrição-da-matéria.html#tinkercad" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+Tinkercad é uma ferramenta online gratuita de design 3D, circuitos eletrônicos e modelagem baseada em blocos, desenvolvida pela Autodesk. É especialmente popular entre iniciantes devido à sua interface intuitiva e facilidade de uso, permitindo que usuários transformem suas ideias em projetos físicos rapidamente.
+</p>
+<p style="text-align: justify;">
+O Tinkercad permite a criação de modelos 3D a partir de formas geométricas básicas, que podem ser combinadas e manipuladas para formar objetos mais complexos. Os usuários podem exportar seus modelos em formatos como STL, OBJ e SVG, adequados para impressão 3D e outras aplicações de fabricação digital. Além disso, o Tinkercad suporta a exportação de designs compatíveis com o jogo Minecraft, permitindo que os usuários criem e importem suas construções para o ambiente do jogo.
+</p>
+<p style="text-align: justify;">
+A plataforma também inclui um módulo para a criação e simulação de circuitos eletrônicos, chamado Tinkercad Circuits. Essa ferramenta permite que os usuários projetem circuitos, adicionem componentes eletrônicos (como resistores, LEDs, sensores e microcontroladores) e simulem o comportamento do circuito diretamente na plataforma. É uma excelente ferramenta educativa para aprender conceitos de eletrônica e programação de microcontroladores como o Arduino.
+</p>
+<p style="text-align: justify;">
+Para usuários interessados em programação, o Tinkercad oferece uma interface de programação baseada em blocos, semelhante ao Scratch, que facilita a criação de código para controlar circuitos e dispositivos. Isso é particularmente útil para iniciantes que estão aprendendo lógica de programação e como integrar software com hardware.
+</p>
+<p><img src="ard2.png" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 21: Interface da plataforma Tinkercad.
+</center>
+<p>Pode-se observar na figura abaixo um circuito de um semáforo desenvolvido na plataforma tinkercad e feito a programação ao lado na barra código.</p>
+<p><img src="ard3.png" style="display:block; margin:0 auto;;width:60.0%" /></p>
+<center>
+Fig 22: Circuito de semáforo desenvolvido no tinkercad.
+</center>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="projeto-final.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-programacao.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 3 Desenho 2D e sua Aplicação na Usinagem CNC | Tópicos Especiais em Eletrônica</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 3 Desenho 2D e sua Aplicação na Usinagem CNC | Tópicos Especiais em Eletrônica" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 3 Desenho 2D e sua Aplicação na Usinagem CNC | Tópicos Especiais em Eletrônica" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Lucas Marcley Carvalho dos Santos" />
+
+
+<meta name="date" content="2024-07-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="máquinas-cnc.html"/>
+<link rel="next" href="corte-a-lazer.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Descrição da Matéria</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#local-e-horário"><i class="fa fa-check"></i><b>1.1</b> Local e Horário</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#sobre-a-matéria"><i class="fa fa-check"></i><b>1.2</b> Sobre a Matéria</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#conteúdo-do-curso"><i class="fa fa-check"></i><b>1.3</b> Conteúdo do Curso</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#objetivos-do-curso"><i class="fa fa-check"></i><b>1.4</b> Objetivos do Curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#teoria"><i class="fa fa-check"></i><b>2.2</b> Teoria</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-da-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações da Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.2</b> Software</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.3.3</b> Segurança</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><i class="fa fa-check"></i><b>3</b> Desenho 2D e sua Aplicação na Usinagem CNC</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html#teoria-1"><i class="fa fa-check"></i><b>3.1</b> Teoria</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html"><i class="fa fa-check"></i><b>4</b> Corte a Lazer</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#teoria-2"><i class="fa fa-check"></i><b>4.1</b> Teoria</a></li>
+<li class="chapter" data-level="4.2" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#tipos-de-materiais"><i class="fa fa-check"></i><b>4.2</b> Tipos de Materiais</a></li>
+<li class="chapter" data-level="4.3" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#prática"><i class="fa fa-check"></i><b>4.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="desenho-3d.html"><a href="desenho-3d.html"><i class="fa fa-check"></i><b>5</b> Desenho 3D</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="desenho-3d.html"><a href="desenho-3d.html#teoria-3"><i class="fa fa-check"></i><b>5.1</b> Teoria</a></li>
+<li class="chapter" data-level="5.2" data-path="desenho-3d.html"><a href="desenho-3d.html#prática-1"><i class="fa fa-check"></i><b>5.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>6</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="impressão-3d.html"><a href="impressão-3d.html#teoria-4"><i class="fa fa-check"></i><b>6.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="impressão-3d.html"><a href="impressão-3d.html#tipos-de-impressão-3d"><i class="fa fa-check"></i><b>6.1.1</b> Tipos de Impressão 3D</a></li>
+<li class="chapter" data-level="6.1.2" data-path="impressão-3d.html"><a href="impressão-3d.html#vantagens-da-impressão-3d"><i class="fa fa-check"></i><b>6.1.2</b> Vantagens da Impressão 3D</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="impressão-3d.html"><a href="impressão-3d.html#prática-2"><i class="fa fa-check"></i><b>6.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html"><i class="fa fa-check"></i><b>7</b> Fresadora CNC</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html#teoria-5"><i class="fa fa-check"></i><b>7.1</b> Teoria</a></li>
+<li class="chapter" data-level="7.2" data-path="fresadora-cnc.html"><a href="fresadora-cnc.html#ptática"><i class="fa fa-check"></i><b>7.2</b> Ptática</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html"><i class="fa fa-check"></i><b>8</b> Soldagem Eletrônica</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#teoria-6"><i class="fa fa-check"></i><b>8.1</b> Teoria</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#processo-de-soldagem-eletrônica"><i class="fa fa-check"></i><b>8.2</b> Processo de Soldagem Eletrônica</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#prática-3"><i class="fa fa-check"></i><b>8.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="circuito-impresso.html"><a href="circuito-impresso.html"><i class="fa fa-check"></i><b>9</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#teoria-7"><i class="fa fa-check"></i><b>9.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#corrosão"><i class="fa fa-check"></i><b>9.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="9.1.2" data-path="circuito-impresso.html"><a href="circuito-impresso.html#usiangem"><i class="fa fa-check"></i><b>9.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="9.1.3" data-path="circuito-impresso.html"><a href="circuito-impresso.html#produção-de-um-circuito-impresso"><i class="fa fa-check"></i><b>9.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>10</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="plotter.html"><a href="plotter.html#teoria-8"><i class="fa fa-check"></i><b>10.1</b> Teoria</a></li>
+<li class="chapter" data-level="10.2" data-path="plotter.html"><a href="plotter.html#prática-4"><i class="fa fa-check"></i><b>10.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html"><i class="fa fa-check"></i><b>11</b> Arduino e Programação</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#teoria-9"><i class="fa fa-check"></i><b>11.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#componentes-básicos-do-arduino"><i class="fa fa-check"></i><b>11.1.1</b> Componentes Básicos do Arduino</a></li>
+<li class="chapter" data-level="11.1.2" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#ambiente-de-desenvolvimento-arduino-ide"><i class="fa fa-check"></i><b>11.1.2</b> Ambiente de Desenvolvimento Arduino (IDE)</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#linguagem-de-programação-arduino"><i class="fa fa-check"></i><b>11.2</b> Linguagem de Programação Arduino</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#estrutura-básica-de-um-sketch"><i class="fa fa-check"></i><b>11.2.1</b> Estrutura Básica de um Sketch</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="arduino-e-programação.html"><a href="arduino-e-programação.html#tinkercad"><i class="fa fa-check"></i><b>11.3</b> Tinkercad</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="projeto-final.html"><a href="projeto-final.html"><i class="fa fa-check"></i><b>12</b> Projeto Final</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="projeto-final.html"><a href="projeto-final.html#construção-do-projeto"><i class="fa fa-check"></i><b>12.1</b> Construção do Projeto</a></li>
+<li class="chapter" data-level="12.2" data-path="projeto-final.html"><a href="projeto-final.html#dificuldades-do-projeto"><i class="fa fa-check"></i><b>12.2</b> Dificuldades do projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referências.html"><a href="referências.html"><i class="fa fa-check"></i>Referências</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tópicos Especiais em Eletrônica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="desenho-2d-e-sua-aplicação-na-usinagem-cnc" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Desenho 2D e sua Aplicação na Usinagem CNC<a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html#desenho-2d-e-sua-aplicação-na-usinagem-cnc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="teoria-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Teoria<a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html#teoria-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+O desenho 2D vetorial é uma forma de representação gráfica que utiliza formas geométricas definidas por equações matemáticas para criar imagens planas. Ao contrário dos formatos de imagem baseados em pixels, como o bitmap, onde as informações são representadas pixel por pixel, o desenho vetorial é baseado em coordenadas e instruções de desenho, o que permite uma escalabilidade sem perda de qualidade.
+</p>
+<p style="text-align: justify;">
+As máquinas de corte CNC, como lasers, vinis e fresadoras, utilizam desenhos 2D vetoriais para realizar operações precisas de corte e gravação em uma variedade de materiais, como <strong>metais, plásticos, madeira e tecidos</strong>. Essas máquinas são controladas por computador e seguem as instruções de corte fornecidas pelos desenhos vetoriais.
+</p>
+<p style="text-align: justify;">
+No contexto da usinagem CNC, as operações possíveis com desenhos 2D vetoriais incluem <strong>corte e rasterização</strong>. O corte é realizado seguindo as linhas vetoriais definidas no desenho, enquanto a rasterização é usada para gravação ou marcação, onde a máquina percorre a área desejada em um padrão de varredura.
+</p>
+<p style="text-align: justify;">
+Além das operações padrão de corte e gravação, as máquinas CNC também podem incorporar <strong>eixos rotativos</strong> para realizar operações adicionais, como o corte de <strong>peças cilíndricas</strong> ou a gravação em <strong>superfícies curvas</strong>. Isso aumenta a versatilidade e as capacidades das máquinas de usinagem CNC.
+</p>
+<p style="text-align: justify;">
+Para criar desenhos 2D vetoriais, uma variedade de programas de design estão disponíveis, incluindo:
+</p>
+<ul>
+<li><p><strong>Inkscape</strong>: Uma poderosa ferramenta de design vetorial de código aberto, adequada para uma variedade de aplicações, desde design gráfico até desenhos técnicos para usinagem CNC.</p></li>
+<li><p><strong>Corel Draw</strong>: Um software popular entre designers gráficos e profissionais de marketing, conhecido por sua facilidade de uso e recursos avançados de ilustração vetorial.</p></li>
+<li><p><strong>Adobe Illustrator</strong>: Uma ferramenta líder no mercado para criação de gráficos vetoriais, amplamente utilizada em design de logotipos, ilustrações e arte vetorial para impressão e web.</p></li>
+</ul>
+<p style="text-align: justify;">
+Os desenhos 2D vetoriais podem ser salvos em uma variedade de formatos, incluindo:
+</p>
+<ul>
+<li><p><strong>PDF</strong> (Portable Document Format): Um formato de arquivo amplamente utilizado para compartilhar documentos que preserva a qualidade e o layout do desenho vetorial.</p></li>
+<li><p><strong>SVG</strong> (Scalable Vector Graphics): Um formato de arquivo XML baseado em vetores amplamente utilizado para gráficos na web e compatível com a maioria dos navegadores modernos.</p></li>
+</ul>
+<p style="text-align: justify;">
+Partindo para uma diferença entre desenho vetorial e bitmap, que é evidenciado principalmente na forma como as imagens são representadas. Enquanto o bitmap consiste em uma grade de pixels, onde cada pixel contém informações de cor, o desenho vetorial é baseado em equações matemáticas que descrevem formas geométricas, como linhas, curvas e círculos. Essa diferença fundamental permite que os desenhos vetoriais sejam dimensionados indefinidamente sem perda de qualidade, enquanto os bitmaps tendem a perder definição à medida que são ampliados.
+</p>
+<p style="text-align: justify;">
+De modo geral, o desenho 2D vetorial desempenha um papel fundamental na usinagem CNC, fornecendo as instruções precisas necessárias para realizar operações de corte e gravação em uma ampla variedade de materiais. Sua natureza escalável e precisa, juntamente com a versatilidade das máquinas CNC, tornam essa combinação uma escolha poderosa para a fabricação moderna em diversas indústrias.
+</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="máquinas-cnc.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="corte-a-lazer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/lucasmarcley/l_marcley/edit/main/02-Desenho2D.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

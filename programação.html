@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Programação | Tópicos Especiais em Eletrônica</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Programação | Tópicos Especiais em Eletrônica" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Programação | Tópicos Especiais em Eletrônica" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Lucas Marcley Carvalho dos Santos" />
+
+
+<meta name="date" content="2024-07-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="circuito-impresso-1.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#local-e-horário"><i class="fa fa-check"></i><b>1.1</b> Local e Horário</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#sobre-a-matéria"><i class="fa fa-check"></i><b>1.2</b> Sobre a Matéria</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#conteúdo-do-curso"><i class="fa fa-check"></i><b>1.3</b> Conteúdo do Curso</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#objetivos-do-curso"><i class="fa fa-check"></i><b>1.4</b> Objetivos do Curso</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#teoria"><i class="fa fa-check"></i><b>2.2</b> Teoria</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-da-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações da Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.2</b> Software</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.3.3</b> Segurança</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><i class="fa fa-check"></i><b>3</b> Desenho 2D e sua Aplicação na Usinagem CNC</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html"><a href="desenho-2d-e-sua-aplicação-na-usinagem-cnc.html#teoria-1"><i class="fa fa-check"></i><b>3.1</b> Teoria</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html"><i class="fa fa-check"></i><b>4</b> Corte a Lazer</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#teoria-2"><i class="fa fa-check"></i><b>4.1</b> Teoria</a></li>
+<li class="chapter" data-level="4.2" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#tipos-de-máquinas-e-materiais"><i class="fa fa-check"></i><b>4.2</b> Tipos de Máquinas e Materiais</a></li>
+<li class="chapter" data-level="4.3" data-path="corte-a-lazer.html"><a href="corte-a-lazer.html#prática"><i class="fa fa-check"></i><b>4.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="desenho-3d.html"><a href="desenho-3d.html"><i class="fa fa-check"></i><b>5</b> Desenho 3D</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="desenho-3d.html"><a href="desenho-3d.html#teoria-3"><i class="fa fa-check"></i><b>5.1</b> Teoria</a></li>
+<li class="chapter" data-level="5.2" data-path="desenho-3d.html"><a href="desenho-3d.html#prática-1"><i class="fa fa-check"></i><b>5.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>6</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="impressão-3d.html"><a href="impressão-3d.html#teoria-4"><i class="fa fa-check"></i><b>6.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="impressão-3d.html"><a href="impressão-3d.html#tipos-de-impressão-3d"><i class="fa fa-check"></i><b>6.1.1</b> Tipos de Impressão 3D</a></li>
+<li class="chapter" data-level="6.1.2" data-path="impressão-3d.html"><a href="impressão-3d.html#vantagens-da-impressão-3d"><i class="fa fa-check"></i><b>6.1.2</b> Vantagens da Impressão 3D</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="impressão-3d.html"><a href="impressão-3d.html#prática-2"><i class="fa fa-check"></i><b>6.2</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html"><i class="fa fa-check"></i><b>7</b> Soldagem Eletrônica</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#teoria-5"><i class="fa fa-check"></i><b>7.1</b> Teoria</a></li>
+<li class="chapter" data-level="7.2" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#processo-de-soldagem-eletrônica"><i class="fa fa-check"></i><b>7.2</b> Processo de Soldagem Eletrônica</a></li>
+<li class="chapter" data-level="7.3" data-path="soldagem-eletrônica.html"><a href="soldagem-eletrônica.html#prática-3"><i class="fa fa-check"></i><b>7.3</b> Prática</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="circuito-impresso.html"><a href="circuito-impresso.html"><i class="fa fa-check"></i><b>8</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#teoria-6"><i class="fa fa-check"></i><b>8.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="circuito-impresso.html"><a href="circuito-impresso.html#corrosão"><i class="fa fa-check"></i><b>8.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="8.1.2" data-path="circuito-impresso.html"><a href="circuito-impresso.html#usiangem"><i class="fa fa-check"></i><b>8.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="8.1.3" data-path="circuito-impresso.html"><a href="circuito-impresso.html#produção-de-um-circuito-impresso"><i class="fa fa-check"></i><b>8.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="circuito-impresso-1.html"><a href="circuito-impresso-1.html"><i class="fa fa-check"></i><b>9</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="circuito-impresso-1.html"><a href="circuito-impresso-1.html#teoria-7"><i class="fa fa-check"></i><b>9.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="circuito-impresso-1.html"><a href="circuito-impresso-1.html#corrosão-1"><i class="fa fa-check"></i><b>9.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="9.1.2" data-path="circuito-impresso-1.html"><a href="circuito-impresso-1.html#usiangem-1"><i class="fa fa-check"></i><b>9.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="9.1.3" data-path="circuito-impresso-1.html"><a href="circuito-impresso-1.html#produção-de-um-circuito-impresso-1"><i class="fa fa-check"></i><b>9.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="programação.html"><a href="programação.html"><i class="fa fa-check"></i><b>10</b> Programação</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="programação.html"><a href="programação.html#teoria-8"><i class="fa fa-check"></i><b>10.1</b> Teoria</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="11" data-path="circuito-impresso-2.html"><a href="circuito-impresso-2.html"><i class="fa fa-check"></i><b>11</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="circuito-impresso-2.html"><a href="circuito-impresso-2.html#teoria-9"><i class="fa fa-check"></i><b>11.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="circuito-impresso-2.html"><a href="circuito-impresso-2.html#corrosão-2"><i class="fa fa-check"></i><b>11.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="11.1.2" data-path="circuito-impresso-2.html"><a href="circuito-impresso-2.html#usiangem-2"><i class="fa fa-check"></i><b>11.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="11.1.3" data-path="circuito-impresso-2.html"><a href="circuito-impresso-2.html#produção-de-um-circuito-impresso-2"><i class="fa fa-check"></i><b>11.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="circuito-impresso-3.html"><a href="circuito-impresso-3.html"><i class="fa fa-check"></i><b>12</b> Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="circuito-impresso-3.html"><a href="circuito-impresso-3.html#teoria-10"><i class="fa fa-check"></i><b>12.1</b> Teoria</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="circuito-impresso-3.html"><a href="circuito-impresso-3.html#corrosão-3"><i class="fa fa-check"></i><b>12.1.1</b> Corrosão</a></li>
+<li class="chapter" data-level="12.1.2" data-path="circuito-impresso-3.html"><a href="circuito-impresso-3.html#usiangem-3"><i class="fa fa-check"></i><b>12.1.2</b> Usiangem</a></li>
+<li class="chapter" data-level="12.1.3" data-path="circuito-impresso-3.html"><a href="circuito-impresso-3.html#produção-de-um-circuito-impresso-3"><i class="fa fa-check"></i><b>12.1.3</b> Produção de um circuito impresso</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tópicos Especiais em Eletrônica</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="programação" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Programação<a href="programação.html#programação" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="teoria-8" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Teoria<a href="programação.html#teoria-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p style="text-align: justify;">
+A fabricação de circuitos impressos (PCBs, do inglês Printed Circuit Boards) é fundamental para o desenvolvimento de dispositivos eletrônicos, pois permite a criação de interconexões estáveis e compactas entre componentes eletrônicos. Os métodos mais comuns para a fabricação de PCBs são a corrosão química e a usinagem mecânica.
+</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="circuito-impresso-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-programacao.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
